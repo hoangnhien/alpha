@@ -635,13 +635,12 @@ nav#site-navigation > ul > li.current-menu-item > a
 .hn-category-view div.hn-category-title a {
 	font-family: 'Arial';
 	font-size: 13px;
-	color: #ed1c24;
-	font-style: italic;
-	line-height: 38px;
-	float: right;
+	color: #757575;
 	text-decoration: none;
 }
-
+.hn-category-view div.hn-category-title a:hover {
+	color: #ed1c24
+}
 .pagination {
 	height: 39px;
 	margin-top: 11px;

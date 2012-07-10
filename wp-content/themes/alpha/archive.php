@@ -29,7 +29,7 @@ Template Name: Products Template
 				
 				<?php 
 					$catId = get_query_var('cat');
-					echo get_category_parents($catId, FALSE, ' &gt; ');
+					echo get_category_parents($catId, TRUE, ' &gt; ');
 				?>
 				
 				
