@@ -187,6 +187,22 @@
 			});
 		});
     </script>
+    <!-- @author: HOANGNHIEN -->
+    <!-- script for product detail slider -->
+    <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/jquery.pikachoose.js"></script>
+    <script language="javascript">
+    $(document).ready(function (){
+    	var preventStageHoverEffect = function(self){
+   			self.wrap.unbind('mouseenter.pikachoose').unbind('mouseleave.pikachoose');
+  		};
+		
+    	$("#pikame").PikaChoose({
+    		carousel:true,
+    		bindsFinished: preventStageHoverEffect
+    		});
+    });
+    </script>
     
     
 <?php wp_footer(); ?>

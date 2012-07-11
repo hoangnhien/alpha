@@ -27,7 +27,7 @@ Template Name: Products Template
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
 				MTTX-LAPTOP
-				<a href="hoangnhien.net">&gt;&gt; xem tất cả</a>
+				<a class="view-cat" href="hoangnhien.net">&gt;&gt; xem tất cả</a>
 			</div>
 			<div class="hn-category-filter">
 				<h1><?php the_title();?></h1>
@@ -36,7 +36,14 @@ Template Name: Products Template
 		</div>
 		<section class="clearfix product-detail">
 			<div class="hn-product-gallery">
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" />
+				
+	<ul id="pikame" class="jcarousel-skin-pika">
+		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+	</ul>
+
 			</div>
 			<div class="hn-product-description">
 				<?php the_field('long_description');?>

@@ -597,14 +597,25 @@ nav#site-navigation > ul > li.current-menu-item > a
 	padding-right: 10px;
 	vertical-align: middle;
 }
-.hn-category-view h1 a {
+.hn-category-view > h1 > a {
+	text-decoration: none;
+	color: #2C2C2C;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-weight: 700;
+    height: 38px;
+    line-height: 38px;
+}
+.hn-category-view > h1 > a.view-cat {
 	font-family: 'Arial';
 	font-size: 13px;
-	color: #ed1c24;
+	color: #757575;
 	font-style: italic;
 	line-height: 38px;
 	float: right;
-	text-decoration: none;
+}
+.hn-category-view > h1 > a:hover {
+	color: #ED1C24;
 }
 /**********************************************/
 

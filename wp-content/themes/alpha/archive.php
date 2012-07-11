@@ -25,7 +25,7 @@ Template Name: Products Template
 		<div class="hn-category-title-block">
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
-				<span>Trang chủ </span>&gt;
+				<span><a href="<?php bloginfo('home'); ?>">Trang chủ </a></span>&gt;
 				
 				<?php 
 					$catId = get_query_var('cat');

@@ -11,7 +11,7 @@
 	<div class="hn-category-view">
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
-			MTXT-LAPTOP
+			<a href="<?php echo get_category_link(4);?>">MTXT-LAPTOP</a>
 			<a class="view-cat" href="<?php echo get_category_link(4);?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
@@ -56,7 +56,7 @@
 	<div class="hn-category-view">
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/pc-icon.png" alt="Products" />
-			MÁY TÍNH ĐỂ BÀN
+			<a href="<?php echo get_category_link(5);?>">MÁY TÍNH ĐỂ BÀN</a>
 			<a class="view-cat" href="<?php echo get_category_link(5);?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">
@@ -102,7 +102,7 @@
 	<div class="hn-category-view">
 		<h1>
 			<img src="<?php bloginfo('template_directory')?>/images/icons/printer-icon.png" alt="Products" />
-			MÁY IN
+			<a href="<?php echo get_category_link(5);?>">MÁY IN</a>
 			<a class="view-cat" href="<?php echo get_category_link(9); ?>">&gt;&gt; xem tất cả</a>
 		</h1>
 		<section class="clearfix">

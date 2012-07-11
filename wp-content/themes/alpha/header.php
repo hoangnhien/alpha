@@ -11,7 +11,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>">
-	
+	<link type="text/css" href="<?php bloginfo('template_directory')?>/css/pikachoo-styles/bottom.css" rel="stylesheet" />
+		
 	<script src="<?php bloginfo('template_directory')?>/js/libs/modernizr-2.5.3.min.js"></script>
 	<?php wp_head(); ?>
 </head>

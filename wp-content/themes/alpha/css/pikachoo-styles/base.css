@@ -6,10 +6,10 @@ a{color:white;}
 /* Style the thumbnails */
 .pika-thumbs{ padding: 0 16px;}
 	.pika-thumbs li{
-		width: 144px;
-		height:74px;
-		margin: 10px 0 0 17px;
-		padding: 0;
+		width: 64px;
+		height:64px;
+		margin: 0;
+		padding: 2px;
 		overflow: hidden;
 		float: left;
 		list-style-type: none;
@@ -22,17 +22,17 @@ a{color:white;}
 	.pika-thumbs li .clip {position:relative;height:100%;text-align: center; vertical-align: center; overflow: hidden;}
 	
 /* The stage is the wrapper. The image fills 100% the height of the stage */
-.pika-stage, .pika-textnav {width: 940px;}
+.pika-stage, .pika-textnav {width: 100%;}
 .pika-stage {position: relative;
              /*
             background: #fafafa;
             border: 1px solid #e5e5e5;
             padding: 10px 10px 40px 10px;
              */
-             margin: 0 20px;
-             top: 20px;
+             margin: 0;
+             
             text-align:center;
-            height:300px;}
+            }
 .pika-stage img{height:100%;}
 .pika-stage .caption {position: absolute; background: #000; background: rgba(0,0,0,0.75);  border: 1px solid #141414; font-size: 11px; 
 			color: #fafafa; padding: 10px; text-align: right; bottom: 50px; right: 10px;}
@@ -40,8 +40,8 @@ a{color:white;}
 
 /* Ths play, pause, prev and next buttons */
 .pika-imgnav a {position: absolute; text-indent: -5000px; display: block;z-index:3;}
-	.pika-imgnav a.previous {background: url(prev.png) no-repeat left 45%; height: 100%; width: 50px; top: 10px; left: 10px;cursor:pointer;}
-	.pika-imgnav a.next {background: url(next.png) no-repeat right 45%; height: 100%; width: 50px; top: 10px; right: 10px;cursor:pointer;}
+	.pika-imgnav a.previous {background: url(prev.png) no-repeat left 45%; height: 70px; width: 20px; top: 243px; left: 10px;cursor:pointer;}
+	.pika-imgnav a.next {background: url(next.png) no-repeat right 45%; height: 70px; width: 20px; top: 243px; right: 10px;cursor:pointer;}
 	.pika-imgnav a.play {background: url(play.png) no-repeat 0% 50%; height: 100px; width: 44px;top:0;left:50%;display: none;cursor:pointer;}
 	.pika-imgnav a.pause {background: url(pause.png) no-repeat 0% 50%; height: 100px; width: 44px;top:0;left:50%;display:none;cursor:pointer;}
 
@@ -61,33 +61,31 @@ a{color:white;}
 
 /* HoangNhien: disable view some element */
 
-.pika-imgnav a.next,
-.pika-imgnav a.previous,
 .pika-textnav a.next,
 .pika-textnav a.previous,
 .pika-counter {display: none;}
 
 /* HoangNhien: restyle some element */
 .pika-thumbs li{ 
-	width: 120px;
-		height:60px;
-		padding: 9px;
+	width: 64px;
+		height:64px;
 		overflow: hidden;
 		float: left;
 		list-style-type: none;
 			
-		margin: 0 9px;
+		margin: 0 5px;
+		padding: 2px;
 		background: #fafafa;
 		border: 1px solid #e5e5e5;
 		cursor: pointer;
 }
 
 .pika-thumbs li.active {
-	padding-top: 7px;
-	border-top: 3px solid #eb4a93;
+	padding: 0px;
+	border: 3px solid #eb4a93;
 }
                  
 .pika-thumbs li .clip {
-    width: 120px;
-	height: 60px;
+    width: 64px;
+	height: 64px;
 }
