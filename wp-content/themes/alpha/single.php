@@ -26,7 +26,8 @@ Template Name: Products Template
 		<div class="hn-category-title-block">
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
-				MTTX-LAPTOP
+				<?php $catId = get_query_var('cat');?>
+				<span><a href="<?php echo get_category_link($catId);?>">MTXT-LAPTOP</a></span>
 				<a class="view-cat" href="hoangnhien.net">&gt;&gt; xem tất cả</a>
 			</div>
 			<div class="hn-category-filter">
