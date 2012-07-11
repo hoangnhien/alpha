@@ -601,7 +601,7 @@ nav#site-navigation > ul > li.current-menu-item > a
 .hn-category-view div.hn-category-title a
  {
 	text-decoration: none;
-	color: #2C2C2C;
+	color: #484747;
     font-family: 'Arial';
     font-size: 13px;
     font-weight: 700;
@@ -610,6 +610,7 @@ nav#site-navigation > ul > li.current-menu-item > a
 }
 .hn-category-view div.hn-category-title > a {
 	font-weight: 400;
+	color: #757575;
 }
 .hn-category-view > h1 > a.view-cat,
 .hn-category-view div.hn-category-title a.view-cat
@@ -1142,6 +1143,49 @@ ul.bottom-menu > li {
 	padding: 0;
 }
 
+/*******************************************************************************
+ * @author: HoangNhien
+ * Style for: contact form
+ ******************************************************************************/
+.wpcf7-form p {
+	border: solid 1px #dedede;
+	height: 18px;
+	width: 355px;
+	padding: 5px 10px;
+	margin: 5px 0;
+	
+	color: #484747;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px
+}
+.wpcf7-form p.hn-textarea {
+	height: 200px;
+}
+.wpcf7-form input {
+	border: none;
+	width: 300px;
+	float: right;
+}
+.wpcf7-form textarea {
+	width: 100%;
+	height: 180px;
+	float: right;
+	border: none;
+	resize: none;
+}
+.wpcf7-form p.hn-submit {
+	border: none;
+	width: auto;
+	float: left;
+}
+.wpcf7-form p.hn-submit input {
+	width: auto;
+	border: solid 1px #dedede;
+	margin: 0;
+	padding: 10px 20px;
+}
 
 /*******************************************************************************
  * @author: HoangNhien
