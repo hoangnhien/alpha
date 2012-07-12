@@ -21,8 +21,8 @@ Template Name: Products Template
 	<div id="top-banner">
 		<img src="<?php bloginfo('template_directory')?>/images/banner.jpg" alt="top banner" />
 	</div>
-	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<div class="hn-category-view">
+		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<div class="hn-category-title-block">
 			<div class="hn-category-title">
 				<img src="<?php bloginfo('template_directory')?>/images/icons/category-view-title.png" alt="Products" />
@@ -35,15 +35,19 @@ Template Name: Products Template
 			</div>
 			
 		</div>
+		<a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg&keepThis=true&TB_iframe=true&height=600&width=700"
+									title="" class="thickbox">AAAAAA</a>
+	
 		<section class="clearfix product-detail">
 			<div class="hn-product-gallery">
 				
-	<ul id="pikame" class="jcarousel-skin-pika">
-		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-		<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-	</ul>
+			<ul id="pikame" class="jcarousel-skin-pika">
+				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg&keepThis=true&TB_iframe=true&height=600&width=700"
+									title="" class="thickbox"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+			</ul>
 
 			</div>
 			<div class="hn-product-description">
@@ -69,33 +73,51 @@ Template Name: Products Template
 				</p>
 			</div>
 		</section>
-		<section class="clearfix product-related">
-			<div class="section-title">
-				<h1>SẢN PHẨM CÙNG LOẠI</h1>
-			</div>
-			<div class="hn-product-item-short">
-				<h1>HP Pavilio G4-1314TU (A9M54PA)</h1>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p><a href="#">[chi tiết...]</a></p>
-			</div>
-			
-			<div class="hn-product-item-short">
-				<h1>HP Pavilio G4-1314TU (A9M54PA)</h1>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p><a href="#">[chi tiết...]</a></p>
-			</div>
-			
-			<div class="hn-product-item-short">
-				<h1>HP Pavilio G4-1314TU (A9M54PA)</h1>
-				<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
-				<p><a href="#">[chi tiết...]</a></p>
-			</div>
-		</section>
+		<?php endwhile;?>
+		<?php endif;?>
+				
+		<?php
+			global $post;
+			$currentPostID = $post->ID;
+			$categories = get_the_category($post->ID);
+			$relatedCat = null;
+			foreach($categories as $category) {
+				if($category->slug != 'noi_bat') {
+					$relatedCat = $category;
+					break;
+				}
+			}
+		?>
+		<?php if(!empty($relatedCat)):?>
 		
+		<?php 
+			global $post;
+			$args = array( 'numberposts' => 4, 'offset'=> 0, 'category' => $relatedCat->cat_ID );
+			$myposts = get_posts( $args );
+		?>
+		<?php if(sizeof($myposts) > 0): ?>
+			<section class="clearfix product-related">
+				<div class="section-title">
+				<h1>SẢN PHẨM CÙNG LOẠI</h1>
+				</div>
+				<?php $index = 0; ?>
+				<?php foreach( $myposts as $post ) :	setup_postdata($post);?>
+				<?php if(get_the_ID() == $currentPostID) continue;
+					$index++;
+					if($index == 4) break;
+					?>
+					<div class="hn-product-item-short">
+					<h1><?php the_title();?></h1>
+					<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />
+					<p><a href="<?php the_permalink();?>">[chi tiết...]</a></p>
+					</div>
+				<?php endforeach; ?>	
+			
+		</section>
+		<?php endif?>
+		<?php endif?>
 	</div>
-	<?php endwhile;?>
-	<?php endif;?>
-	
+		
 
 </div>
 
