@@ -35,18 +35,14 @@ Template Name: Products Template
 			</div>
 			
 		</div>
-		<a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg&keepThis=true&TB_iframe=true&height=600&width=700"
-									title="" class="thickbox">AAAAAA</a>
-	
 		<section class="clearfix product-detail">
 			<div class="hn-product-gallery">
 				
 			<ul id="pikame" class="jcarousel-skin-pika">
-				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg&keepThis=true&TB_iframe=true&height=600&width=700"
-									title="" class="thickbox"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="javascript:void(0);"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
 			</ul>
 
 			</div>
@@ -62,12 +58,12 @@ Template Name: Products Template
 				<a href="#">CLICK VÀO ĐÂY ĐỂ ĐẶT HÀNG</a>
 			</div>
 			<div class="clear"></div>
-			<button class="hn-tab hn-product-intro-button">Tổng quan về sản phẩm</button>
-			<button class="hn-tab hn-product-info-button active">Thông số kỹ thuật</button>
-			<div class="hn-tab-content hn-product-intro"  style="display:none">
+			<button class="hn-tab hn-product-intro-button active">Tổng quan về sản phẩm</button>
+			<button class="hn-tab hn-product-info-button">Thông số kỹ thuật</button>
+			<div class="hn-tab-content hn-product-intro">
 				<?php the_field('tong_quan_ve_san_pham');?>
 			</div>
-			<div class="hn-tab-content hn-product-info">
+			<div class="hn-tab-content hn-product-info" style="display:none">
 				<p>
 				<?php the_field('thong_so_ky_thuat');?>
 				</p>
@@ -92,7 +88,7 @@ Template Name: Products Template
 		
 		<?php 
 			global $post;
-			$args = array( 'numberposts' => 4, 'offset'=> 0, 'category' => $relatedCat->cat_ID );
+			$args = array( 'numberposts' => 3, 'offset'=> 0, 'category' => $relatedCat->cat_ID ,'post__not_in' => array($post->ID),);
 			$myposts = get_posts( $args );
 		?>
 		<?php if(sizeof($myposts) > 0): ?>
@@ -102,10 +98,6 @@ Template Name: Products Template
 				</div>
 				<?php $index = 0; ?>
 				<?php foreach( $myposts as $post ) :	setup_postdata($post);?>
-				<?php if(get_the_ID() == $currentPostID) continue;
-					$index++;
-					if($index == 4) break;
-					?>
 					<div class="hn-product-item-short">
 					<h1><?php the_title();?></h1>
 					<img src="<?php bloginfo('template_directory')?>/images/contents/product-thumbnail.jpg" alt="Products" />

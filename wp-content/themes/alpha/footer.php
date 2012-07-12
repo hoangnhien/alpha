@@ -25,7 +25,7 @@
 	            	</div>
 	            	<div class="counter">
 	            		<h2>Số lượt truy cập</h2>
-	            		<p class="title">- Đang online :	</p><p>15</p>
+	            		<p class="title">- Đang online :	</p><p>%USERS%</p>
 						<p class="title">- Hôm nay :	</p><p>300</p>
 						<p class="title">- Tổng cộng :	</p><p>121234</p>
 	            	</div>
@@ -69,6 +69,7 @@
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
   <script src="<?php bloginfo('template_directory')?>/js/plugins.js"></script>
   <script src="<?php bloginfo('template_directory')?>/js/script.js"></script>
+  <script src="<?php bloginfo('template_directory')?>/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
   
   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -196,10 +197,16 @@
     	var preventStageHoverEffect = function(self){
    			self.wrap.unbind('mouseenter.pikachoose').unbind('mouseleave.pikachoose');
   		};
+
+  		var a = function(self){
+  	      self.anchor.fancybox();
+  	   };
 		
     	$("#pikame").PikaChoose({
     		carousel:true,
-    		bindsFinished: preventStageHoverEffect
+    		autoPlay:false,
+    		bindsFinished: preventStageHoverEffect,
+    		buildFinished:a
     		});
     });
     </script>

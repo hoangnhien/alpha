@@ -733,7 +733,7 @@ nav#site-navigation > ul > li.current-menu-item > a
 }
 .hn-product-description p {
 	font-family: 'Arial';
-	font-size: 13px;
+	font-size: 12px;
 	color: #484747;
 	line-height: 20px;
 }
@@ -763,7 +763,8 @@ nav#site-navigation > ul > li.current-menu-item > a
 	font-weight: 700;
 	line-height: 38px;
 	color: #484747;
-	background: #fff;
+	
+	background: #dedede;
 }
 
 .hn-product-intro-button:hover,
@@ -771,18 +772,18 @@ nav#site-navigation > ul > li.current-menu-item > a
 .hn-product-intro-button.active,
 .hn-product-info-button.active
  {
-	background: #dedede;
+	background: #fff;
 	color: #979797;
 }
 
 .hn-product-intro,
 .hn-product-info {
 	border-top: solid 1px #dedede;
-	padding: 10px 0;
+	padding: 15px 0;
 	
 	font-family: 'Arial';
-	font-size: 11px;
-	line-height: 16px;
+	font-size: 12px;
+	line-height: 20px;
 	color: #484747;
 }
 
@@ -855,6 +856,7 @@ nav#site-navigation > ul > li.current-menu-item > a
 	color: #0030ad;
 	text-decoration: none;
 	text-align: center;
+	display: block;
 	
 }
 
