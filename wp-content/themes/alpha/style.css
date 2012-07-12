@@ -1034,10 +1034,10 @@ a.go-to-top:hover {
 	padding: 0 0 10px 0;
 }
 .footer-level1 p,
-.footer-level1 a {
+.footer-level1 a{
 	font-family: 'Arial';
 	font-size: 12px;
-	line-height: 16px;
+	line-height: 20px;
 	color: #9bb0e7;
 	text-decoration: none;
 }
@@ -1056,6 +1056,7 @@ a.go-to-top:hover {
 	width: 50%;
 	float: left;
 	position: relative;
+	line-height: 20px;
 }
 .counter p.title {
 	width: 95px;

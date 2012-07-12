@@ -12,12 +12,12 @@
             		<a href="javascript:void(0);" class="go-to-top" onclick="goToTop()">LÊN ĐẦU TRANG</a>
 	            	<div class="first-content">
 	            		<h2>Hỗ trợ khách hàng</h2>
-	            		<ul>
-	            			<li><a href="javascript:void(0);">- Liên hệ với Alpha</a></li>
-							<li><a href="javascript:void(0);">- Quy định giao hàng & hoàn trả hàng</a></li>
-							<li><a href="javascript:void(0);">- Hướng dẫn chọn mua máy tính</a></li>
-							<li><a href="javascript:void(0);">- Thuật ngữ máy tính</a></li>
-						</ul>
+	            		
+	            			<p><a href="javascript:void(0);">- Liên hệ với Alpha</a></p>
+							<p><a href="javascript:void(0);">- Quy định giao hàng & hoàn trả hàng</a></p>
+							<p><a href="javascript:void(0);">- Hướng dẫn chọn mua máy tính</a></p>
+							<p><a href="javascript:void(0);">- Thuật ngữ máy tính</a></p>
+						
 	            	</div>
 	            	<div>
 	            		<h2>Kết nối với chúng tôi</h2>
@@ -25,7 +25,8 @@
 	            	</div>
 	            	<div class="counter">
 	            		<h2>Số lượt truy cập</h2>
-	            		<p class="title">- Đang online :	</p><p>%USERS%</p>
+	            		
+	            		<p class="title">- Đang online :	</p><p><?php get_useronline_count(true);?></p>
 						<p class="title">- Hôm nay :	</p><p>300</p>
 						<p class="title">- Tổng cộng :	</p><p>121234</p>
 	            	</div>
