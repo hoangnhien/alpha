@@ -26,9 +26,9 @@
 	            	<div class="counter">
 	            		<h2>Số lượt truy cập</h2>
 	            		
-	            		<p class="title">- Đang online :	</p><p><?php get_useronline_count(true);?></p>
-						<p class="title">- Hôm nay :	</p><p>300</p>
-						<p class="title">- Tổng cộng :	</p><p>121234</p>
+	            		<p class="title">- Đang online :	</p><p><?php echo get_users_online_count(); ?></p>
+						<p class="title">- Hôm nay :	</p><p><?php echo _chikuncount_getToday();?></p>
+						<p class="title">- Tổng cộng :	</p><p><?php echo chikuncount(); ?></p>
 	            	</div>
             	</section>
             </section>
