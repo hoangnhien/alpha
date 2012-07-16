@@ -85,7 +85,12 @@ Template Name: Products Template
 				}
 				
 				?>
-	 			<img src="<?php echo $thumb?>" alt="product-thumb" width="90" height="90" />
+				<?php if($thumb != ""): ?>
+	 				<img src="<?php echo $thumb?>" alt="product-thumb" width="90" height="90" />
+	 			<?php else: ?>
+	 				<img src="<?php bloginfo('template_directory')?>/images/contents/default-img.jpg" alt="product-thumb" width="90" height="90" />
+	 			<?php endif; ?>
+
 				<div class="short-description">
 					<?php short_content(get_field('short_description'), 100);?>
 				</div>

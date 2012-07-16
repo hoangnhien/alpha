@@ -11,13 +11,10 @@
             	<section class="wraper">
             		<a href="javascript:void(0);" class="go-to-top" onclick="goToTop()">LÊN ĐẦU TRANG</a>
 	            	<div class="first-content">
-	            		<h2>Hỗ trợ khách hàng</h2>
-	            		
-	            			<p><a href="javascript:void(0);">- Liên hệ với Alpha</a></p>
-							<p><a href="javascript:void(0);">- Quy định giao hàng & hoàn trả hàng</a></p>
-							<p><a href="javascript:void(0);">- Hướng dẫn chọn mua máy tính</a></p>
-							<p><a href="javascript:void(0);">- Thuật ngữ máy tính</a></p>
-						
+	            		<?php $content = get_field('footer_hotrokhachhang', 181);
+	                        if($content != "") echo $content;
+	                        else the_default_value('footer_hotrokhachhang');
+                     	?>
 	            	</div>
 	            	<div>
 	            		<h2>Kết nối với chúng tôi</h2>
@@ -38,14 +35,16 @@
 	            		<img src="<?php bloginfo('template_directory')?>/images/footer-logo.png" />
 	            	</div>
 	            	<div class="center-content">
-	            		<p><span>Công ty Thiết bị công nghệ ALPHA</span></p>
-	            		<p>Trụ sở: 190 Nam Kỳ Khởi Nghĩa, P. 8, Q. 3, Tp. HCM</p>
-	            		<p>Showroom: 383A Điện Biên Phủ, Q.3, Tp.HCM</p>
+	            		<?php $content = get_field('footer_gioithieu', 181);
+	                        if($content != "") echo $content;
+	                        else the_default_value('footer_gioithieu');
+                     	?>
 	            	</div>
 	            	<div class="last-content">
-	            		<p>Tel: +84 8 - 3 8765 432</p>
-						<p>Fax: +84 8 - 3 8765 433</p>
-						<p>E-mail: info@congnghealpha.com</p>
+	            		<?php $content = get_field('footer_lienhe', 181);
+	                        if($content != "") echo $content;
+	                        else the_default_value('footer_lienhe');
+                     	?>
 	            	</div>
             	</section>
             	<section class="wraper bottom-nav">
@@ -57,6 +56,7 @@
 	            			<li><a href="#">Chính sách</a> |</li>
 	            			<li><a href="#">Tư vấn/ Hỗ trợ</a> |</li>
 	            			<li><a href="#">Liên hệ với chúng tôi</a></li>
+
 	            		</ul>
 	            	</nav>
 	            	

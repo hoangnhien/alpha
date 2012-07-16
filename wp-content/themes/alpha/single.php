@@ -39,10 +39,13 @@ Template Name: Products Template
 			<div class="hn-product-gallery">
 				
 			<ul id="pikame" class="jcarousel-skin-pika">
-				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
-				<li><a href="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg"><img src="<?php bloginfo('template_directory')?>/images/contents/product-full.jpg" alt="Products" /></a><span></span></li>
+				<?php $rows = get_field('images'); ?>
+				<?php if($rows): ?>
+					<?php foreach($rows as $row): ?>
+						<li><a href="<?php echo $row['image']; ?>"><img src="<?php echo $row['image']; ?>" alt="Products" width="288" height="228" /></a><span></span></li>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			
 			</ul>
 
 			</div>
@@ -55,7 +58,7 @@ Template Name: Products Template
 				 * thong_so_ky_thuat
 				 */
 				?>
-				<a href="#">CLICK VÀO ĐÂY ĐỂ ĐẶT HÀNG</a>
+				<a href="<?php bloginfo('home'); ?>/lien-he/">CLICK VÀO ĐÂY ĐỂ ĐẶT HÀNG</a>
 			</div>
 			<div class="clear"></div>
 			<button class="hn-tab hn-product-intro-button active">Tổng quan về sản phẩm</button>

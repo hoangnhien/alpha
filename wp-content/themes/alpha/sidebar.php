@@ -59,6 +59,10 @@
 		
 	</div>
 	
-	<div class="hn-widget">
-	Quảng cáo
-	</div>
+	<?php $content = get_field('quangcao_bottom_left', 198);?>
+    <?php if($content != ""): ?>
+		<div class="hn-widget hn-advert">
+		<?php echo $content;?>
+		</div>
+    <?php endif; ?>
+	

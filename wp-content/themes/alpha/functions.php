@@ -240,3 +240,34 @@ function hn_login_logo() { ?>
 <?php }
 add_action( 'login_enqueue_scripts', 'hn_login_logo' );
 ?>
+<?php
+function the_default_value( $arg ) {
+	switch($arg) {
+		case 'header_gioi_thieu':
+			echo '<p><span>CÔNG TY THIẾT BỊ CÔNG NGHỆ ALPHA</span></p>
+                        <p>190 Nam Kỳ Khởi Nghĩa, P.́, Q.3, Tp.HCM</p>
+                        <p>Email: info@congnghealpha.com</p>';
+            break;
+        case 'header_lienhemuahang':
+        	echo '<p>LIÊN HỆ MUA HÀNG:</p>
+                	<p><img src="http://congnghealpha.com/wp-content/themes/alpha/images/icons/phone.png" /><span>083 8 765432</span></p>';
+			break;
+		case 'header_hotrotructuyen':
+			echo '<p>HỖ TRỢ TRỰC TUYẾN 24H:</p>
+                	<p><img src="http://congnghealpha.com/wp-content/themes/alpha/images/icons/support.png" /><span>0972 74 3139</span></p>';
+            break;
+        case 'footer_gioithieu':
+        	echo '<p><span>Công ty Thiết bị công nghệ ALPHA</span></p>
+	            		<p>Trụ sở: 190 Nam Kỳ Khởi Nghĩa, P. 8, Q. 3, Tp. HCM</p>
+	            		<p>Showroom: 383A Điện Biên Phủ, Q.3, Tp.HCM</p>';
+	        break;
+	    case 'footer_lienhe':
+	    	echo '<p>Tel: +84 8 - 3 8765 432</p>
+						<p>Fax: +84 8 - 3 8765 433</p>
+						<p>E-mail: info@congnghealpha.com</p>';
+			break;
+
+        default: {}
+	}
+}
+?>

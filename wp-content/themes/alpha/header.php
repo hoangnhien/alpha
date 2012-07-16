@@ -33,19 +33,26 @@
                 
                 <div id="site-logo"><a href="<?php bloginfo('home'); ?>"><img src="<?php bloginfo('template_directory')?>/images/site-logo.png" alt="logo"/></a></div>
                 <div id="site-description">
-                	<p><span>CÔNG TY THIẾT BỊ CÔNG NGHỆ ALPHA</span></p>
-					<p>190 Nam Kỳ Khởi Nghĩa, P.́, Q.3, Tp.HCM</p>
-					<p>Email: info@congnghealpha.com</p>
+                	<?php $content = get_field('header_gioi_thieu', 181);
+                        if($content != "") echo $content;
+                        else the_default_value('header_gioi_thieu');
+                     ?>
+
+                    
                 </div>
                 
                 <div class="hot-line">
-                	<p>LIÊN HỆ MUA HÀNG:</p>
-                	<p><img src="<?php bloginfo('template_directory')?>/images/icons/phone.png" /><span>083 8 765432</span></p>
+                    <?php $content = get_field('header_lienhemuahang', 181);
+                        if($content != "") echo $content;
+                        else the_default_value('header_lienhemuahang');
+                     ?>
                 </div>
                 
                 <div class="hot-line last">
-                	<p>HỖ TRỢ TRỰC TUYẾN 24H:</p>
-                	<p><img src="<?php bloginfo('template_directory')?>/images/icons/support.png" /><span>0972 74 3139</span></p>
+                	<?php $content = get_field('header_hotrotructuyen', 181);
+                        if($content != "") echo $content;
+                        else the_default_value('header_hotrotructuyen');
+                     ?>
                 </div>
                 
                 <div class="clear"></div>

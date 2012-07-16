@@ -553,6 +553,18 @@ nav#site-navigation > ul > li.current-menu-item > a
 	width: 228px;
 	margin-bottom: 10px;
 }
+.hn-widget.hn-advert {
+	width: 198px;
+	padding: 15px;
+
+	color: #817F7F;
+    font-family: 'Arial';
+    font-size: 12px;
+    overflow: hidden;
+}
+.hn-advert img {
+	width: 198px;
+}
 .hn-widget h1 {
 	margin: 1px;
 	padding: 0 8px;
@@ -1033,6 +1045,10 @@ a.go-to-top:hover {
 	margin: 0;
 	padding: 0 0 10px 0;
 }
+.footer-level1 .first-content > a {
+	display: block;
+	width: 100%;
+}
 .footer-level1 p,
 .footer-level1 a{
 	font-family: 'Arial';
@@ -1189,7 +1205,6 @@ ul.bottom-menu > li {
 	margin: 0;
 	padding: 10px 20px;
 }
-
 /*******************************************************************************
  * @author: HoangNhien
  * Style for: sub-page highlight
